@@ -6,7 +6,7 @@
 /*   By: jlong <jlong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 08:45:37 by jlong             #+#    #+#             */
-/*   Updated: 2021/10/25 14:58:35 by jlong            ###   ########.fr       */
+/*   Updated: 2021/10/28 18:27:01 by jlong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void	set_chunck(t_state *stack)
 		nb_chunck = 5;
 	else
 		nb_chunck = 11;
-	stack->chunck = malloc((sizeof(int) * nb_chunck));
+	stack->chunck = malloc((sizeof(int) * (nb_chunck + 1)));
 	if (!stack->chunck)
 		exit(EXIT_FAILURE);
 	i = 0;

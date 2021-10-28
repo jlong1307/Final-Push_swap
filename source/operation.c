@@ -6,7 +6,7 @@
 /*   By: jlong <jlong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 13:06:25 by jlong             #+#    #+#             */
-/*   Updated: 2021/09/30 11:13:08 by jlong            ###   ########.fr       */
+/*   Updated: 2021/10/28 17:37:22 by jlong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,17 +51,11 @@ void	ft_sb(t_stack *first)
 	write(1, "sb\n", 3);
 }
 
-t_state	*ft_ra(t_state *s)
+void	ft_ra(t_state *stack, t_stack *first)
 {
-	t_stack	*tmp;
-
-	if (!s->a)
-		return (s);
-	tmp = s->a;
-	s->a = remove_front(s->a);
-	s->a = add_back(s->a, tmp->val);
-	write (1, "ra\n", 3);
-	return (s);
+	add_back_in_stack(&stack->a, first->val);
+	delete_nodea(stack);
+	write(1, "ra\n", 3);
 }
 
 void	ft_rra(t_state *stack)

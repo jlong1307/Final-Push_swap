@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   case_with_five.c                                   :+:      :+:    :+:   */
+/*   general_untils2.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlong <jlong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 08:45:48 by jlong             #+#    #+#             */
-/*   Updated: 2021/09/29 17:08:56 by jlong            ###   ########.fr       */
+/*   Updated: 2021/10/28 17:30:29 by jlong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,6 @@ void	ft_add_front(t_stack **alst, t_stack *new)
 	}
 	else
 		*alst = new;
-}
-
-t_stack	*remove_front(t_stack *stack)
-{
-	t_stack	*new_t_list;
-
-	if (!stack)
-		return (stack);
-	new_t_list = stack;
-	stack = stack->next;
-	free (new_t_list);
-	new_t_list = NULL;
-	return (stack);
 }
 
 void	delete_nodea(t_state *del)

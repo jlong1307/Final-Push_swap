@@ -6,7 +6,7 @@
 /*   By: jlong <jlong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/27 11:11:06 by jlong             #+#    #+#             */
-/*   Updated: 2021/10/25 14:58:09 by jlong            ###   ########.fr       */
+/*   Updated: 2021/10/28 17:30:41 by jlong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ typedef struct s_state
 }				t_state;
 
 int			size_stack(t_stack *stc);
-t_stack		*remove_front(t_stack *stack);
 void		ft_rrb(t_state *stack);
 void		ft_rb(t_state *stack, t_stack *first);
 void		op_rrb(t_state *s);
@@ -71,7 +70,7 @@ void		find_max(t_stack *s, t_state *stack);
 void		move_top(t_state *s, int i);
 void		ft_sa(t_stack *first);
 void		ft_rra(t_state *stack);
-t_state		*ft_ra(t_state *s);
+void		ft_ra(t_state *stack, t_stack *first);
 void		ft_op_rra(t_state *s, int i);
 void		ft_op_ra(t_state *s, int i);
 t_stack		*add_new_value(int val);

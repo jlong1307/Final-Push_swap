@@ -6,7 +6,7 @@
 /*   By: jlong <jlong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:27:44 by jlong             #+#    #+#             */
-/*   Updated: 2021/10/20 09:09:30 by jlong            ###   ########.fr       */
+/*   Updated: 2021/10/28 18:06:17 by jlong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,8 @@ int	*put_in_tab(t_state *stack)
 	int		i;
 	t_stack	*temp;
 
-	tab = malloc(sizeof(int) * size_stack(stack->a) + 1);
+	temp = NULL;
+	tab = malloc(sizeof(int) * (size_stack(stack->a) + 1));
 	if (!tab)
 		exit (EXIT_FAILURE);
 	i = 0;
